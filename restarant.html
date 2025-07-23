@@ -9,7 +9,7 @@
             margin:0px;
             background-color: black;
         }
-        .sudiv1{
+    .sudiv1{
         width:20vw;
         border: 3px dodgerblue
         solid;
@@ -17,6 +17,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width:280px;
+        height:56vh;
        
     }
     .sudiv1:hover{
@@ -33,13 +35,17 @@
     #non-vege{
         display:flex;
         justify-content: space-evenly;
-        background-color: aqua;
         width:80%;
         position:sticky;
         left:130px;
         border-radius: 80px;
         border:3px dotted rgb(250, 85, 167);
+        height:70vh;
+        top:10vh;
+        align-items:center;
+        color:white;
     }
+
     header{
         background-color: rgb(247, 91, 213);
         font-size: 70px;
@@ -57,18 +63,23 @@
         color:white;
         text-align:center;
     }
-    #non-vege:hover .bag{
+    #non-vege:hover .sudiv1{
         transform: scale(0.8);
     }
     #veg{
         display:flex;
         justify-content: space-evenly;
-        background-color: red;
         width:80%;
         position:sticky;
         left:130px;
         border-radius: 80px;
         border:3px dotted rgb(250, 85, 167);
+        height:75vh;
+        align-items: center;
+        color:rgb(91, 230, 160);
+    }
+    #veg:hover .v{
+        transform: scale(0.9);
     }
     .v{
         width:20vw;
@@ -77,6 +88,8 @@
         border:3px solid yellow;
         border-radius: 30px;
         align-items: center;
+        text-align: center;
+        height:370px;
     }
     .v img{
         width:15vw;
@@ -116,7 +129,67 @@
         height:33vh;
         border-radius: 30px;
     }
-    </style>
+    h6{
+        position:absolute;
+        top:70vh;
+        color:blanchedalmond;
+        background-color: blue;
+        font-size: xx-large;
+        width:430px;
+        border-radius:30px;
+        text-align: center;
+    }
+    #veg-with-rise{
+        position:absolute;
+        top:90vh;
+        color:aliceblue;
+        display: flex;
+        justify-content: space-evenly;
+        width:100%;
+        border-radius:60px;
+        border:6px dotted darkorange;
+        height:100%;
+        align-items: center;
+    }
+    #veg:hover .vr{
+        transform: scale(0.9);
+    }
+    .vr{
+        width:20vw;
+        display:flex;
+        flex-direction: column;
+        border:3px solid rgb(65, 202, 236);
+        border-radius: 30px;
+        align-items: center;
+        text-align: center;
+        height:55vh;
+        justify-content: center;
+    }
+    .vr img{
+        width:230px;
+        height:180px;
+        border-radius: 15%;
+    }
+    .vr:hover{
+        transition:all 0.5s;
+        transform:scale(1.1);
+        rotate:3deg;
+        background-color: aqua;
+    }
+    #b1{
+        width: 140px; 
+        height:40px; 
+        border-radius:30px; 
+        background-color:rgb(247, 140, 224);
+    }
+    #b1:hover{
+        animation-name:bounse;
+        animation-timing-function: ease-in-out;
+        transform: scale(1.1);
+        transform:all 0.5s;
+        box-shadow: 10px -7px 10px;
+    }
+</style>
 </head>
 <body>
     <div classs="topdiv">
@@ -128,17 +201,17 @@
         <div class="sudiv1">
             <h1>Biriyani</h1>
             <img src="Biriyani image.jfif">
-            <h2>Ambur Biriyani</h2>
+            <h2><button id="b1">Order Ambur Biriyani</button></h2>
         </div>
         <div class="sudiv1">
             <h1>Biriyani</h1>
             <img src="Thindukkal Biriyani image.jfif">
-            <h2>Dhindukkal Bhiriyani</h2>
+            <h2><button id="b1">Order Dhindukkal Bhiriyani</button></h2>
         </div>
         <div class="sudiv1">
             <h1>Biriyani</h1>
             <img src="Biriyani image.jfif">
-            <h2>Maharastra Biriyani</h2>
+            <h2><button id="b1">Order Maharastra Biriyani </button></h2>
         </div>
     </div>
         <h5>Veg</h5>
@@ -155,8 +228,23 @@
         </div>
         <div class="v">
             <h1>Poori</h1>
-            <img src="masaldhosa image.jfif" alt="Poori image">
+            <img src="poori.jpg" alt="Poori image">
             <h2>with the mattan kuzhambu</h2>
+        </div>
+        <h6>Veg With Rise</h6>
+        <div id="veg-with-rise">
+            <div class="vr">
+                <h1>Full Meals</h1>
+                <img src="full meals images.jfif" alt="">
+            </div>
+            <div class="vr">
+                <h1>Mini Meels</h1>
+                <img src="half meals.jfif" alt="">
+            </div>
+            <div class="vr">
+                <h1>Veraitti Rise</h1>
+                <img src="vereaitti raises.jfif" alt="">
+            </div>
         </div>
     </div>
 </body>
